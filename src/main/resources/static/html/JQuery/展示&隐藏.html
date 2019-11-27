@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style type="text/css">
+    #div1{
+        height: 100px;
+        width: 100px;
+        background-color: #0C0C0C;
+        color: #00F7DE;
+    }
+</style>
+<script type="text/javascript" src="../../js/Jquery-3.4.1.js"></script>
+<script type="application/javascript">
+    function fun1() {
+        var val = $("#input1").val();
+        if (val=="点击隐藏div1") {
+            $("#input1").val("点击展示div1");
+            $("#div1").hide(900);
+        }else {
+            $("#div1").show(900);
+            $("#input1").val("点击隐藏div1");
+        }
+    }
+
+</script>
+
+<body>
+
+</body>
+    <div id="div1">div1</div>
+<input id="input1" type="button" value="点击隐藏div1" onclick="fun1()">
+</html>

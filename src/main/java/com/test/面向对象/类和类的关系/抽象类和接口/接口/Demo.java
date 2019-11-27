@@ -1,0 +1,11 @@
+package com.test.面向对象.类和类的关系.抽象类和接口.接口;
+
+public interface Demo {
+    public int a =1;
+
+    void eat();
+
+    default void sleep(){
+
+    }
+}

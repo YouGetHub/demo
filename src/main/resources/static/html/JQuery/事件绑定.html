@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../../js/Jquery-3.4.1.js"></script>
+    <script>
+        window.onload = fun1; // 浏览器运行时 加载fun1
+        function fun1() {
+            // jQuery的监听事件和JavaScript一样去掉 【on】
+            $(":button").click(function () {
+                // this 被点击的button的DOM对象
+                var data = $(this).val();
+                console.log(data);
+            })
+        }
+
+        function fun2() {
+            $(":button:lt(3)").bind("click",function () { // 绑定前三个button
+                // this 被点击的button的DOM对象
+                var data = $(this).val();
+                console.log(data);
+            });
+        }
+        function fun3(){  // 解绑前二个button
+            $(":button:lt(2)").unbind("click"); // 解除前二个button的绑定
+        }
+    </script>
+</head>
+
+<body>
+<!-- 给事件1 事件2 事件3 绑定一个事件-->
+    <input type="button" value="事件1">
+    <input type="button" value="事件2">
+    <input type="button" value="事件3">
+
+    <input type="button" value="绑定前三个button" onclick="fun2()">
+    <input type="button" value="解绑前二个button" onclick="fun3()">
+</body>
+</html>

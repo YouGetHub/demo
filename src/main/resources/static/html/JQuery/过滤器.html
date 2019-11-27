@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../../js/Jquery-3.4.1.js"></script>
+    <style type="text/css">
+    div{
+        width: 100%;
+        height: 20px;
+        background-color: lightsteelblue;
+    }
+    </style>
+    <script type="text/javascript">
+        function but(data) {
+            if ( data == 1 ) { // 定位页面中第一个div
+                $("div:first").css("background-color","black");
+            } else if ( data == 2) { // 定位页面中最后一个div
+                $("div:last").css("background-color","yellow");
+            } else if ( data == 3) { // 定位页面指定下标位置的div ( 1 )
+                $("div:eq(1)").css("background-color","green");
+            } else if ( data == 4) { // 定位页面指定下标位置之前所有的div ( 3 )
+                $("div:lt(3)").css("background-color","#00F7DE");
+            } else if ( data == 5) { // 定位页面中指定位置之后的div ( 2 )
+                $("div:gt(2)").css("background-color","#00F7DE");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">1</div>
+    <div id="div2">2</div>
+    <div id="div3">3</div>
+    <div id="div4">4</div>
+    <div id="div5">5</div>
+
+    <button onclick="but(1)">定位页面中第一个div</button>
+    <button onclick="but(2)">定位页面中最后一个div</button>
+    <button onclick="but(3)">定位页面指定下标位置的div ( 1 )</button>
+    <button onclick="but(4)">定位页面指定下标位置之前所有的div ( 3 )</button>
+    <button onclick="but(5)">定位页面中指定位置之后的div ( 2 )</button>
+</body>
+</html>
+<!--
+    对已经定位到jQuery中dom对象进行二次过滤
+    过滤器不能单独使用 必需要声明在选择器的后面
+    使用
+        $(":button:first") 定位页面中第一个button
+        $(":button:last") 定位页面中最后一个button
+        $("div:eq(2)") 定位页面指定下标位置的div
+        $("div:lt(3)") 定位页面指定下标位置之前所有的div
+        $("div:gt(2)") 定位页面中指定位置之后的div
+-->

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本选择器</title>
+    <script type="text/javascript" src="../../js/Jquery-3.4.1.js"></script>
+    <script>
+
+        // 基本选择器
+            function clickInput(data) {
+                if (data == 1) {
+                    $("#divId1").css("background-color","blue");
+                }else if (data == 2){
+                    $(".divId2").css("background-color","red");
+                }else if (data == 3) {
+                    $("body").css("background-color","green");
+                }else if (data == 4){
+                    $("*").css("background-color","yellow");
+                }else if (data == 5){
+                    $("#divId3,.divId4").css("background-color","purple");
+                }
+            }
+    </script>
+    <style type="text/css">
+        #divId1{height: 100px;width: 100px;}
+        .divId2{height: 100px;width: 100px;}
+        #divId3{height: 100px;width: 100px;}
+        .divId4{height: 100px;width: 100px;}
+    </style>
+</head>
+<body>
+    <div id="divId1"> 1 </div>
+    <div class="divId2"> 2 </div>
+    <span>3</span>
+    <div id="divId3"> 5 </div>
+    <div class="divId4"> 6 </div>
+    <button type="button" onclick="clickInput(1);">id 点击 1背景变成 blue</button>
+    <button type="button" onclick="clickInput(2);">class 点击 2背景变成 red</button>
+    <button type="button" onclick="clickInput(3);">标签 点击 body背景变成 green</button>
+    <button type="button" onclick="clickInput(4);">所有标签 点击 4背景变成 yellow</button>
+    <button type="button" onclick="clickInput(5);">多个标签 点击 5，6背景变成 purple</button>-->
+</body>
+</html>

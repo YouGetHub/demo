@@ -1,0 +1,109 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+#div1 {
+    border: 1px solid blue;
+    height: 1000%;
+    width: 100%;
+    position: absolute; /* 定位 */
+}
+#img2{
+    width: 40px;
+    height: 40px;
+    position: fixed; /* 定位，固定悬浮位置*/
+    top: 90%;
+    left: 90%;
+}
+#submit1{
+    color: blue;
+    cursor: pointer; /* 鼠标悬浮显示手标 */
+}
+#div2{
+    font-size: 15px; /* 字体放大*/
+    font-weight: bolder; /* 字体加粗 lighter->normal->bold->bolder */
+    color:blue; /* 字体颜色 */
+    font-style: italic; /* 斜体 normal(还原)*/
+    font-family: Arial; /* 字体样式 */
+    text-align: left;/* 文本操作 */
+    line-height: 25px; /* 每行文本的间距 */
+    text-indent: 2em; /* 行缩进 */
+    text-decoration: line-through; /* 中划线 */
+    text-decoration: underline; /* 下划线 none(去除下划线)*/
+    cursor: pointer; /* 鼠标悬浮显示手标 */
+    padding: 100px 0px 0px 100px; /* 内边距 top right button left */
+    margin: 80px 80px; /* 外边距 top left*/
+    position: relative; /* 定位  relative(保留原来的位置) absolute(不保留原来的位置)*/
+    float: left; /* 让容器往左移动 */
+    height: 300px; /* div容器的高 */
+    width: 500px; /* div容器的宽 */
+    border: 20px solid black; /* 边距的尺寸 边距样式为实线 边距的颜色*/
+    border-left-color:green; /* 左边距的颜色 */
+    border-right-color: aqua; /* 右边距的颜色 */
+    border-bottom-color: cornsilk; /* 下边距的颜色*/
+    border-top-color: hotpink; /* 上边距的颜色*/
+}
+#div3{
+    border: 10px solid blue; /* 边距的尺寸 边距样式为实线 边距的颜色*/
+    border-radius: 50%; /* 把容器设置为圆形状*/
+    height: 100px; /* 设置容器的高 */
+    width: 100px; /* 设置容器的宽 */
+}
+#div4{
+    border: 1px solid blue; /* 边距的尺寸 边距样式为实线 边距的颜色 */
+    width: 600px; /* 设置容器的宽*/
+    height: 400px;
+    position: relative; /* 设置容器定位(保留原位置)*/
+    margin: 80px 800px; /* 设置位置*/
+}
+#div5{
+    border: 1px solid blue;
+    width: 500px;
+    position: relative;
+    margin-top: 0px;
+    left: 80px;
+}
+#img1{
+    width: 30%;
+    height: 30%;
+}
+span::before{
+    content: "我最帅";
+    display: inline-block; /* 设置为块级元素*/
+    width: 100px;
+    height: 70px;
+    border: 1px solid blue;
+    background-color: gold;
+    position: relative;
+    left: 80px;
+    text-align: center;
+    padding-top: 35px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.class1::after{
+    content: "";
+    display: block; /* 设置成块元素 clear：both 才会生效*/
+    clear: both; /* 清除浮动*/
+}
+.class1{
+    border: 1px solid blue;
+}
+.class2{
+    position: relative;
+    float: left;
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    color: aliceblue;
+}
+.class3-jack{
+    list-style: none; /* 去除黑点*/
+    float: left;
+    height: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+    text-align: center;
+    line-height: 15px;
+}
+

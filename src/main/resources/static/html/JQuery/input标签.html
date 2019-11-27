@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input标签</title>
+    <script type="text/javascript" src="../../js/Jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        function but1(data) {
+            if ( data == 1 ) {
+                var typeData = $(":text").val();                // 通过 type 类型获取value 值
+                var idData = $("#input1").val();                // 通过 id 获 取value 值
+                alert(typeData+"<---->"+idData);
+            } else if ( data == 2 ) {
+                var passwordData = $(":password").val();        // 通过 type 类型获取value值
+                var idData = $("#input2").val();                //通过 id 获取 value 值
+                alert(passwordData+"<--->"+idData);
+            } else if ( data == 3 ) {
+                var typeData = $(":file").val();                // 通过 type 类型获取value值
+                var idData = $("#input3").val();                //通过 id 获取 value 值
+                alert(typeData+"<---->"+idData);
+            } else if ( data == 4 ) {
+                var $typeData = $(":radio");
+                $typeData.each(typeDataEach); //  $typeData中有几个dom对象就执行几次 typeDataEach();
+            }
+        }
+        function typeDataEach(k,v) {
+            console.log("ok");
+            console.log(k+"<--->"+v);
+        }
+
+    </script>
+</head>
+<body>
+    <form action="" method="get">
+        text:<input type="text" value="" id="input1"> <br/>
+        password:<input type="password" value="" id="input2"> <br>
+        file:<input type="file" value="" id="input3"> <br>
+        radio:<input type="radio" value=""> <br>
+        radio:<input type="radio" value=""> <br>
+    </form>
+    <button onclick="but1(1);">text</button>
+    <button onclick="but1(2);">password</button>
+    <button onclick="but1(3);">file</button>
+    <button onclick="but1(4);">radio</button>
+</body>
+</html>

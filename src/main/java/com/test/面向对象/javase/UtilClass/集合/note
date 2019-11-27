@@ -1,0 +1,18 @@
+集合是用来存储引用类型的容器，集合主要有两大类
+Collection接口：存储数据是单个存取
+1) List<E>接口：存储的数据有序，可重复的;
+        ArraysList：底层是数组，默认初始化大小为10，扩容1.5倍，随机访问元素快，添加删除元素效率慢,不是线程安全;
+        vector：底层是数组，默认大小10，扩容2倍，线程安全,古老的实现类，效率低于ArrayList
+        LinkedList：底层是双向链表，添加删除效率高，查找元素慢，添加或删除元素时，只需要修改节点的指针域，
+            双向链表由若干个节点组成，每个结点除了数据域以外，还有一个指向下个结点的指针域，一个指向上个结点的指针域
+2) Set<E>接口：存储的数据无序，不可重复;
+        HashSet底层是HashMap,Hash Set就是Hash Map的键的集合，向Hash Set中添加元素实际上就是把该元素作为键添加到了HashMap中
+        SortedSet，可以对元素自然排序，要求集合中的元素是可比较的
+        TreeSet<E> 可以对集合的元素自然排序，TreeSet底层是TreeMap,TreeSet就是TreeMap的键的集合
+
+Map<E>接口：存储“键-值”对的数据
+        HashMap<key,value>,线程不安全，初始化容量16，键重复 新值覆盖原来的值，元素的size大于初始化容量 * 加载因子0.75时，需要扩容，扩容2倍大小,键值可以为null
+        HashTable<key,value>线程安全，初始化容量11，元素的size大于初始化数组的容量（哈希桶的容量） * 加载因子0.75时，需要扩容，扩容2倍 + 1,键值不能为null
+        LinkedHashMap
+        TreeMap
+    Hashtable(子类：Properties)

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作属性函数</title>
+</head>
+<script type="text/javascript" src="../../js/Jquery-3.4.1.js"></script>
+<script>
+    function fun1() {
+        var data = $("#input1").val(); // 获取value值ss
+        $("#input1").val("databases"); // 给value赋值
+    }
+    
+    function fun2() {
+        var data = $(".input2").prop("checked");
+        if (data == false) {
+            $(".input2").prop("checked",true);
+            $("#input3").text("全部取消")
+        }else {
+            $(".input2").prop("checked",false);
+            $("#input3").text("点击全选")
+        }
+    }
+    
+    function fun3() {
+        $("#input4").text("23")
+    }
+</script>
+<body>
+<input id="input1" type="text" value="">
+<button onclick="fun1()">获取value值</button> <br/>
+
+苹果<input class="input2" type="radio" value="苹果" >
+香蕉<input class="input2" type="radio" value="香蕉">
+<button type="button" id="input3" onclick="fun2()">点击全选</button>
+</body>
+</html>

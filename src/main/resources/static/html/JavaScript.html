@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript">
+    /*鼠标点击事件：onclick
+    失去焦点：onblur
+    内容发生变化&&失去焦点：onchange
+    获取焦点：onfocus
+    网面加载后：onload
+    按下按键时：onkeydown
+    松下键盘：onkeyup
+    鼠标点击事件左键和右键：onmousedown
+    鼠标在网页移动时触发：onmousemove
+    鼠标移动到某个组件时触发：onmouseover
+    鼠标离开某个组件时触发：onmouseout
+    鼠标按住松开时：onmouseup */
+
+    /*        // 修改body内容
+            function change(){
+                // document.write("此电脑的分辨率" +window.screen.width+ "x" +window.screen.height);
+                // window.document.body.innerHTML="修改网页内容";
+                var spanObj = window.document.getElementById("span1"); // 获取元素id
+                spanObj.innerText="Zhang"; // 修改元素内容
+                spanObj.style.color="blue"; // 修改字体颜色
+            }*/
+
+    /*        // 显示隐藏
+            function change1(data) {
+                var ulObj = window.document.getElementById("u11-"+data);
+                if (ulObj.style.display=="none"){
+                    ulObj.style.display="block";
+                }else{
+                    ulObj.style.display="none";
+                }
+            }*/
+
+    /*    // 鼠标悬浮事件
+        function over(elment) {
+            elment.style.color="blue";
+        }
+        function sout(elment){
+            elment.style.color="black";
+        }*/
+
+    /*    // 老式写法
+        function init(){
+            var btn1 = window.document.getElementById("btn1");
+            btn1.onclick=function () {
+                alert("ok");
+            }
+        }*/
+    /*// 新版写法
+        function init() {
+            var btn3 = window.document.getElementById("btn1");
+            var btnn3 = function () {
+                alert("ok");
+            }
+            btn3.addEventListener("click",btnn3);
+        }*/
+
+    /*// 倒计时
+        var timer;
+        function init() {
+            timer = window.document.getElementById("span1");
+            // window.setTimeout(countdown,1000); 每一秒钟执行一次countdown 就会停止
+            window.setInterval(countdown,1000); // 每一秒钟就会执行一次 不会停止
+        }
+        function countdown() {
+            timer.innerHTML = timer.innerHTML-1;
+            if (timer.innerHTML==0){
+                window.document.location="http://www.baidu.com";
+            }
+        }*/
+
+    /*// 输入框只能输入数字
+            function clickNum(data) {
+                var value = data.keyCode;
+                if ((value<48||value>57)&&(value<96||value>105)) {
+                    return false;
+                }else{
+                    return true;
+                }
+            };*/
+
+    /*    // innerTEXT(修改容器内容 格式为text) innerHTML(修改网页内容 格式为网页)
+            function innerTEXT() {
+                var value = document.getElementById("span1");
+                value.innerText="修改成功";
+            }
+            function innerHTML1() {
+                window.document.body.innerHTML="修改成功";
+            }*/
+
+    /*//全选和取消
+            function click1(obj) {
+                var elementsByClassName = document.getElementsByClassName("ch1");
+                    for (var i =0; i<elementsByClassName.length; i++){
+                        elementsByClassName[i].checked=obj.checked;
+                    }
+            }
+            function input1(data) {
+                var elementById = document.getElementById("cc1");
+                alert(elementById.checked);
+                alert(data.checked);
+                var elementsByClassName = document.getElementsByClassName("ch1");
+                var count = 0;
+                for (var i=0;i<elementsByClassName.length;i++){
+                    if ( elementsByClassName[i].checked){
+                        count = count+1;
+                    }
+                }
+                if (count==3){
+                    elementById.checked = true;
+                }
+                if (!data.checked){
+                    elementById.checked = data.checked;
+                }
+            }*/
+
+    /*    // 多级联动
+            var anhui = ["淮北","亳州"];
+            var beijing = ["昌平","朝阳"];
+            var nanjing = ["玄武","秦淮"];
+
+            var anhui1 = ["淮北66","亳州666"];
+            var beijing1 = ["昌平666","朝阳666"];
+            var nanjing1 = ["玄武666","秦淮666"];
+
+            var count1 =0;
+            function select1(data1) {
+                console.log(data1.value);
+                var number1 = data1.value;
+                var arr1 = undefined;
+                switch (number1) {
+                    case "1":
+                        arr1 = anhui;
+                        break;
+                    case "2":
+                        arr1 = beijing;
+                        break;
+                    case "3":
+                        arr1 = nanjing;
+                        break;
+                    default:
+                        var elementById1 = document.getElementById("selectAll");
+                        elementById1.innerHTML = '<option value="0">请选择</option>';
+                        break;
+                }
+                var elementById = document.getElementById("selectAll");
+                elementById.innerHTML = '<option value="0">请选择</option>';
+                for (var i = 0; i<arr1.length;i++){
+                    count1++;
+                    elementById.innerHTML+='<option value='+count1+'>'+arr1[i]+'</option>';
+                }
+                count1 =0;
+            }
+
+            var count2 = 0;
+            function select2(data2) {
+                var value = data2.value;
+                var arr2 = undefined;
+                switch (value) {
+                    case "1":
+                        arr2 = anhui1;
+                        break;
+                    case "2":
+                        arr2 = beijing1;
+                        break;
+                    case "3":
+                        arr2 = nanjing1;
+                        break;
+                }
+                var elementById = document.getElementById("selectAll1");
+                elementById.innerHTML = '<option value="0"> 请选择</option>';
+                for (var i =0; i<arr2.length;i++){
+                    count2++;
+                    elementById.innerHTML += '<option value='+count2+'>'+arr2[i]+'</option>';
+                }
+                count2 =0;
+                arr2 = [];
+            }*/
+
+    /*    // 添加
+            function btn1() {
+                var table2 = window.document.getElementById("table1");
+                var htmlTableRowElement = document.createElement("tr");
+                htmlTableRowElement.innerHTML='<td>姓名</td>\n' +
+                    '            <td><input type="text" value=""></td>\n' +
+                    '            <td><a href="javascript:void(0)" onclick="del(this);">删除</a></td>';
+                table2.appendChild(htmlTableRowElement);
+            }
+            //删除
+            function del(data) {
+                alert(data.parentElement.parentElement.remove());
+                data.parentElement.parentElement.remove();
+            }*/
+
+    /*//轮播图
+    var interval;
+    function image2(data) {
+        // 如果是true清空Interval停止轮播图
+        // 如果是false继续轮播图
+        if (data){
+            // 清空Interval
+            window.clearInterval(interval);
+            return
+        }
+
+        // 每2秒轮播一次图片
+        interval = window.setInterval('btn(1)',2000);
+    }
+    var arr = ['../images/1.jpg','../images/2.png','../images/3.jpg','../images/4.jpg'];
+    // 图片计数
+    var count = 0;
+    function btn(data) {
+        alert(arr.length);
+        // 获取图片属性
+        var elementById = document.getElementById('img1');
+        // 轮播一张图片 count +1
+        count=count+data;
+        // 如果count的数量同等与图片的顺序 当count=4 那么就轮播完毕 接着从0开始 继续轮播
+        if (count==4){
+            // count == 0 图片从第一张开始轮播
+            count=0;
+            // 如果是-1 点击的就是上一页
+        }else if (count<1){
+            // count = count的最后一个 然后展示
+            alert(alert.length);
+            count=arr.length-1;
+        }
+        // 图片的src路径
+        elementById.src = arr[count];
+    }
+    function stop(){
+        // 鼠标悬浮某个组件时触发
+        image2(true);
+    }
+    function start(){
+        // 鼠标离开某个组件时触发
+        image2(false);
+    }*/
+
+    /*// 正则表达式
+            /!*    使用方式
+                    var reg = /表达式/[表达式参数];
+                    var reg1 = new RegExp("表达式",["表达式参数"]);
+              表达式参数取值
+                    g (查找出现的pattern) i(忽略大小写) m(多行查找)
+                正则对象的2类
+                    1，查找包含的正则
+                       var reg = /表达式/; var reg = /\d/ 是否包含数字
+                    2. 匹配的正则
+                        var reg = /^表达式$/; 例如var reg = /^\d$/ 匹配判断字串是否是1位的数字
+            *!/
+        // 验证某个字符中是否包含中文
+            var reg = /[\u4e00-\u9fa5]/;
+            // alert(reg.test(prompt("请输入")));
+        // 匹配邮箱是否合法
+            var email = /^[0-9a-zA-Z]+@[0-9a-zA-Z]+\.com()?$/;
+            alert(email.test(prompt("请输入邮箱")));*/
+
+    /*//  表单验证 弹出框alert
+        var boo = 0;
+        function userNameCheck(){
+            // 获取表单Id
+            var userNameDataObj = document.getElementById("userNameData");
+            // 获取表单内容
+            var userNameValue = userNameDataObj.value;
+            var reg = /^[a-zA-Z0-9_]{6,10}$/;
+            // 获取span的id
+            var spanMessageId = document.getElementById("spanMessage");
+            if (!reg.test(userNameValue)){
+                // 不匹配就等于false 回显错误提示
+                spanMessageId.innerHTML='用户名错误 长度为6-10位i';
+                // return false 停止程序
+                boo = 1;
+                return false;
+            }
+            spanMessageId.innerHTML='用户名可以使用';
+            return true;
+        }
+
+        // 提交按钮的事件
+        function submitCheck() {
+            // 用户名不可以就返回false 按钮点击不生效
+            if (!userNameCheck()){
+                return false;
+            }
+            // 用户名可以就返回true 按钮生效
+            return true;
+        }
+
+        //弹出框
+        function resetCheck(){
+            // true false
+            return confirm("确定要重置吗");
+        }*/
+
+    /*//open
+    function but1(dataUrl) {
+        // 新网页打开百度 (dataUrl,null)    原网页打开 (dataUrl,"_self")   弹出框打开百度 (dataUrl,null,"channelmode=yes")
+        window.open(dataUrl,null,"channelmode=yes");
+    }*/
+
+    // json
+    var jsonObj = {
+        "id": 1,
+        "username": "小明",
+        "age": 18
+    };
+
+    document.write("id:" + jsonObj.id + "--username:" + jsonObj.username + "---age:" + jsonObj.age);
+    var jsonObj2 = [
+        {
+            "id": 1,
+            "username": "小明",
+            "age": 18
+        },
+        {
+            "id": 2,
+            "username": "小兰",
+            "age": 17
+        }
+    ];
+    for (var i = 0; i < jsonObj2.length; i++) {
+        document.write(jsonObj2[i].id + "\t" + jsonObj2[i].username + "" + jsonObj2[i].age);
+    }
+
+</script>
+<body> <!-- onload="init();"-->  <!-- onload="image2()"; 轮播图-->
+
+<!--<button onclick="but1('http://www.baidu.com')">点击</button>-->
+
+<!--    <form action="">
+        用户名<input type="text" onblur="userNameCheck();" id="userNameData"><span id="spanMessage"></span> <br/>
+        <input type="submit" value="提交" onclick="return submitCheck();">
+        <input type="reset" value="重置" onclick="return resetCheck();">
+    </form>-->
+
+<!--<center>
+    <img src='../images/1.jpg' id="img1" onmouseover="stop();" onmouseout="start();"><br/>
+    <div id="div10">
+        <button onclick="btn(-1);" onmouseover="stop()"; onmouseout="start()";>上一张</button>
+        <button onclick="btn(1);" onmouseover="stop()"; onmouseout="start()";>下一张</button>
+    </div>
+</center>-->
+<!--<form action="">
+    <table id="table1">
+        <tr>
+            <td>姓名</td>
+            <td><input type="text" value=""></td>
+            <td><a href="javascript:void(0)" onclick="del(this);">删除</a></td>
+        </tr>
+    </table>
+    <input type="submit" value="提交">
+
+    <input type="button" value="添加" onclick="btn1();">
+</form>-->
+
+<!--省份<select onchange="select1(this)" >
+        <option value="0"> 请选择</option>
+        <option value="1"> 安徽</option>
+        <option value="2"> 北京</option>
+        <option value="3"> 南京</option>
+    </select>
+城市<select id="selectAll" onchange="select2(this)">
+    <option value="0"> 请选择</option>
+    </select>
+镇<select id="selectAll1">
+    <option value="0"> 请选择</option>
+  </select>-->
+
+<!--    <input type="checkbox" id="cc1" onclick="click1(this);" >全选<br/>
+    <input type="checkbox" class="ch1" onclick="input1(this);">苹果<br/>
+    <input type="checkbox" class="ch1" onclick="input1(this);">橘子<br/>
+    <input type="checkbox" class="ch1" onclick="input1(this);">西瓜<br/>-->
+
+<!--        &lt;!&ndash; 修改body内容&ndash;&gt;
+         <div><span id ="span1">Zou</span> Hao yu</div>
+         <button onclick="change();">点击修改网页内容</button>-->
+
+<!--    显示隐藏
+        <div onclick="change1(1);">
+            选择标题
+        </div>
+            <ul id="u11-1">
+                <li>橘子</li>
+                <li>苹果</li>
+                <li>西瓜</li>
+            </ul>
+
+        <div onclick="change1(2);">
+            选择标题
+        </div>
+        <ul id="u11-2">
+            <li>橘子</li>
+            <li>苹果</li>
+            <li>西瓜</li>
+        </ul>
+-->
+
+<!--鼠标悬浮事件
+<span onmouseover="over(this);" onmouseout="sout(this);">鼠标悬浮颜色=blue,移开color=black</span>-->
+
+<!--<button id="btn1">点击</button>-->
+
+<!--<span id="span1">3</span>-->
+
+<!--<input type="text" onkeydown="return clickNum(event)">-->
+
+<!--// innerTEXT(修改容器内容 格式为text) innerHTML(修改网页内容 格式为网页)
+<input type="button"  value="innerTEXT 修改容器内容" onclick="innerTEXT();">
+<input type="button"  value="innerHTML 修改网页内容" onclick="innerHTML1();">
+<span id="span1"> 666 </span>-->
+</body>
+</html>
